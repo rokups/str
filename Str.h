@@ -340,6 +340,10 @@ public:                                                                         
 
 #endif
 
+// Disable PVS-Studio warnings:
+//  - V730. Not all members of a class are initialized inside the constructor. (local_buf is not initialized and that is fine).
+//-V:STR_DEFINETYPE:730
+
 // Helper to define StrXXXf constructors
 #define STR_DEFINETYPE_F(TYPENAME, TYPENAME_F)                                      \
 class TYPENAME_F : public TYPENAME                                                  \
